@@ -1,0 +1,21 @@
+# Gramática 3 — Sentencias con else opcional
+# Complejidad: alta
+# Nótese que la recursión izquierda en stmtlist hace que {IF, ID}
+# se propaguen a los SIGUIENTE de casi todos los no terminales.
+#
+# PRIMERO esperado:
+#   stmtlist   = { ID, IF }
+#   stmt       = { ID, IF }
+#   elseclause = { ELSE, ε }
+#   expr       = { ID }
+#
+# SIGUIENTE esperado:
+#   stmtlist   = { $, ID, IF }
+#   stmt       = { $, ELSE, ID, IF }
+#   elseclause = { $, ELSE, ID, IF }
+#   expr       = { $, ELSE, ID, IF, THEN }
+
+stmtlist   -> stmtlist stmt | stmt
+stmt       -> IF expr THEN stmt elseclause | ID ASSIGN expr
+elseclause -> ELSE stmt | epsilon
+expr       -> ID
