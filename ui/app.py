@@ -16,7 +16,7 @@ from src.parser.first_follow.first_sets import calcular_primero
 from src.parser.first_follow.follow_sets import calcular_siguiente
 from src.parser.first_follow.grammar import EPSILON, MARCA_FIN
 
-# ── Tema 
+# Tema
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("blue")
 
@@ -45,7 +45,7 @@ class App(ctk.CTk):
         self.minsize(900, 580)
         self._construir_ui()
 
-    # ── Construcción de la interfaz 
+    #  Construcción de la interfaz 
 
     def _construir_ui(self):
         self._construir_encabezado()
@@ -142,7 +142,7 @@ class App(ctk.CTk):
         )
         self._caja_resultados.grid(row=1, column=0, sticky="nsew", padx=12, pady=(0, 12))
 
-    # ── Acciones 
+    # Acciones
 
     def _cargar_archivo(self):
         ruta = filedialog.askopenfilename(
@@ -188,7 +188,7 @@ class App(ctk.CTk):
         except Exception as e:
             messagebox.showerror("Error inesperado", f"{type(e).__name__}: {e}")
 
-    # ── Formateo de resultados 
+    # Formateo de resultados
 
     def _formatear(self, gramatica, primero, siguiente) -> str:
         AN = "═" * 52
@@ -219,7 +219,7 @@ class App(ctk.CTk):
         lineas.append(f"\n{AN}")
         return '\n'.join(lineas)
 
-    # ── Utilidades 
+    # Utilidades
 
     def _escribir_entrada(self, texto: str):
         self._caja_entrada.delete("1.0", "end")

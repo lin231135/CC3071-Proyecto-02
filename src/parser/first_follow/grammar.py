@@ -48,14 +48,14 @@ class Gramatica:
         self.producciones: list = []
         self.simbolo_inicio: str = None
 
-    # ── Escritura ──────────────────────────────────────────────────────────
+    # Escritura
 
     def agregar_produccion(self, cabeza: str, cuerpo: list):
         prod = Produccion(cabeza, cuerpo)
         if prod not in self.producciones:
             self.producciones.append(prod)
 
-    # ── Consultas ──────────────────────────────────────────────────────────
+    # Consultas 
 
     def producciones_de(self, simbolo: str) -> list:
         return [p for p in self.producciones if p.cabeza == simbolo]

@@ -45,7 +45,7 @@ def primero_de_cadena(simbolos: list, primero: dict, gramatica: Gramatica) -> se
     """
     resultado = set()
 
-    # Cuerpo vacío → producción epsilon
+    # Cuerpo vacío -> producción epsilon
     if not simbolos:
         resultado.add(EPSILON)
         return resultado

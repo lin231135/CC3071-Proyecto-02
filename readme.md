@@ -165,7 +165,9 @@ Construida con **CustomTkinter** en modo oscuro. Incluye botones de acceso rápi
 
 ## Video de ejecución
 
-> 🎬 **[Ver video en YouTube](https://youtu.be/ENLACE_AQUI)**
+[![Ver demo en YouTube](https://img.youtube.com/vi/DHuI9BV_FEA/maxresdefault.jpg)](https://youtu.be/DHuI9BV_FEA)
+
+>  **[Ver video en YouTube]([https://youtu.be/ENLACE_AQUI](https://youtu.be/DHuI9BV_FEA?si=Pm7BT1Gzz2lCvFpb))**
 
 El video (≤ 5 minutos) muestra:
 

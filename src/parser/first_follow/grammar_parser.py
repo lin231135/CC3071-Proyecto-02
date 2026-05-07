@@ -30,7 +30,7 @@ class ParserGramatica:
         texto = self._limpiar(texto)
         return self._parsear(texto)
 
-    # ── Limpieza ───────────────────────────────────────────────────────────
+    # Limpieza 
 
     def _limpiar(self, texto: str) -> str:
         """Elimina líneas de comentario (# ...) y líneas vacías."""
@@ -41,7 +41,7 @@ class ParserGramatica:
                 lineas.append(sin_comentario)
         return '\n'.join(lineas)
 
-    # ── Parseo ─────────────────────────────────────────────────────────────
+    # Parseo
 
     def _parsear(self, texto: str) -> Gramatica:
         gramatica = Gramatica()
@@ -88,7 +88,7 @@ class ParserGramatica:
 
         return gramatica
 
-    # ── Auxiliares ─────────────────────────────────────────────────────────
+    # Auxiliares
 
     @staticmethod
     def _resolver_epsilon(simbolos: list) -> list:
