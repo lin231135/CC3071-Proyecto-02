@@ -1,3 +1,0 @@
-E -> E PLUS T | T
-T -> T TIMES F | F
-F -> LPAREN E RPAREN | ID

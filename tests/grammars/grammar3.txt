@@ -1,4 +1,0 @@
-stmtlist   -> stmtlist stmt | stmt
-stmt       -> IF expr THEN stmt elseclause | ID ASSIGN expr
-elseclause -> ELSE stmt | epsilon
-expr       -> ID
