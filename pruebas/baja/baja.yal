@@ -1,0 +1,16 @@
+(* Analizador Léxico - Complejidad Baja *)
+(* Gramática: asignaciones simples con suma *)
+
+let ws      = " " | "\t" | "\n"
+let digito  = ['0'-'9']
+let numero  = digito+
+let letra   = ['a'-'z'] | ['A'-'Z'] | '_'
+let id      = letra (letra | digito)*
+
+rule tokens =
+    ws       { return WS }
+  | numero   { return NUM }
+  | id       { return ID }
+  | "+"      { return PLUS }
+  | "="      { return ASSIGN }
+  | ";"      { return SEMI }

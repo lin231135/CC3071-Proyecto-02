@@ -1,0 +1,34 @@
+/* Parser de Complejidad Media: expresiones aritméticas con precedencia */
+
+/* ── Sección de TOKENS ── */
+%token ID NUM PLUS MINUS TIMES DIV LPAREN RPAREN ASSIGN SEMI WS
+IGNORE WS
+
+%%
+
+/* ── Sección de PRODUCCIONES ── */
+programa:
+    lista_stmt
+;
+lista_stmt:
+    lista_stmt stmt
+  | stmt
+;
+stmt:
+    ID ASSIGN expr SEMI
+;
+expr:
+    expr PLUS term
+  | expr MINUS term
+  | term
+;
+term:
+    term TIMES factor
+  | term DIV factor
+  | factor
+;
+factor:
+    LPAREN expr RPAREN
+  | NUM
+  | ID
+;

@@ -1,0 +1,5 @@
+x = (3 + 4) * 2;
+y = x / 2 - 1;
+print(x + y);
+z = x * y;
+print(z);

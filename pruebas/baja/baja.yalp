@@ -1,0 +1,27 @@
+/* Parser de Complejidad Baja: asignaciones simples con suma */
+
+/* ── Sección de TOKENS ── */
+%token ID NUM PLUS ASSIGN SEMI WS
+IGNORE WS
+
+%%
+
+/* ── Sección de PRODUCCIONES ── */
+programa:
+    lista_stmt
+;
+lista_stmt:
+    lista_stmt stmt
+  | stmt
+;
+stmt:
+    ID ASSIGN expr SEMI
+;
+expr:
+    expr PLUS term
+  | term
+;
+term:
+    ID
+  | NUM
+;

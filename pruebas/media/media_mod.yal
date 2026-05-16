@@ -1,0 +1,23 @@
+(* Analizador Léxico - Complejidad Media MODIFICADO *)
+(* Soporta: asignaciones, +, -, *, /, paréntesis, instrucción print *)
+(* IMPORTANTE: palabras clave ANTES que la regla 'id' *)
+
+let ws      = " " | "\t" | "\n"
+let digito  = ['0'-'9']
+let numero  = digito+
+let letra   = ['a'-'z'] | ['A'-'Z'] | '_'
+let id      = letra (letra | digito)*
+
+rule tokens =
+    ws        { return WS }
+  | "print"   { return PRINT }
+  | numero    { return NUM }
+  | id        { return ID }
+  | "+"       { return PLUS }
+  | "-"       { return MINUS }
+  | "*"       { return TIMES }
+  | "/"       { return DIV }
+  | "("       { return LPAREN }
+  | ")"       { return RPAREN }
+  | "="       { return ASSIGN }
+  | ";"       { return SEMI }

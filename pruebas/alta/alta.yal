@@ -1,0 +1,27 @@
+(* Analizador Léxico - Complejidad Alta *)
+(* Soporta: while, if-do, begin-end, asignaciones, expresiones, condiciones *)
+(* IMPORTANTE: las palabras clave deben listarse ANTES que 'id' *)
+
+let ws     = " " | "\t" | "\n"
+let digito = ['0'-'9']
+let numero = digito+
+let letra  = ['a'-'z'] | ['A'-'Z'] | '_'
+let id     = letra (letra | digito)*
+
+rule tokens =
+    ws        { return WS }
+  | "while"   { return WHILE }
+  | "if"      { return IF }
+  | "do"      { return DO }
+  | "begin"   { return BEGIN }
+  | "end"     { return END }
+  | numero    { return NUM }
+  | id        { return ID }
+  | "+"       { return PLUS }
+  | "-"       { return MINUS }
+  | "*"       { return TIMES }
+  | "<"       { return LT }
+  | ">"       { return GT }
+  | "=="      { return EQ }
+  | "="       { return ASSIGN }
+  | ";"       { return SEMI }
