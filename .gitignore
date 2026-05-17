@@ -14,3 +14,12 @@ env/
 # Sistema operativo
 .DS_Store
 Thumbs.db
+
+# Archivos generados por el proyecto
+scanner_generado.py
+parser_generado.py
+*.png
+*.bak
+
+# Claude Code
+.claude/
