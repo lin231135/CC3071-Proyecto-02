@@ -1,5 +1,0 @@
-begin
-  while x > 0
-    y = y + x
-  end
-end

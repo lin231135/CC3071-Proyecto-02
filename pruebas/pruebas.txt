@@ -1,0 +1,48 @@
+------------------ Baja ------------------
+
+Valida:
+
+x = 1;
+y = x + 2;
+z = y + x;
+
+Error:
+
+= x 1 +
+
+------------------ Media -----------------
+
+Valida:
+
+resultado = (a + b) * 2;
+x = 10 / 2 - 3;
+y = x * (resultado + 1);
+
+Error:
+
+x = (10 + 2
+y = 5 * 3;
+
+------------------ Alta ------------------
+
+Valida:
+
+begin
+  x = 10;
+  y = 0;
+  while x > 0 do begin
+    y = y + x;
+    x = x - 1
+  end;
+  if y > 40 do begin
+    resultado = y * 2
+  end
+end
+
+Error:
+
+begin
+  while x > 0
+    y = y + x
+  end
+end

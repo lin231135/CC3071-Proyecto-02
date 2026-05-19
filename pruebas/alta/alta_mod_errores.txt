@@ -1,7 +1,0 @@
-begin
-  x = 5;
-  if x > 0 do begin
-    y = 1
-  end else
-  z = 2
-end
